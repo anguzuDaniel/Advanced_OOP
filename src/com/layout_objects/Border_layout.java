@@ -15,9 +15,9 @@ public class Border_layout {
        home = new JFrame("Using a border layout.");
 
        // using the gridlayout
-       home.setLayout(new GridLayout(2, 3));
+       home.setLayout(new GridLayout(3, 2));
 
-       button1 = new JButton();
+
        button2 = new JButton();
        button3 = new JButton();
        button4 = new JButton();
@@ -27,9 +27,31 @@ public class Border_layout {
        home.add(button3, BorderLayout.NORTH);
        home.add(button2, BorderLayout.EAST);
        home.add(button1, BorderLayout.WEST);
+    }
 
+    public final void prepareLayout() {
+        home = new JFrame();
+        home.setSize(500, 500);
+        home.setVisible(true);
+    }
 
-       home.setSize(500, 500);
-       home.setVisible(true);
+    public final JButton prepareButton1() {
+        button1 = new JButton();
+        return button1;
+    }
+
+    public final JButton prepareButton2() {
+        button2 = new JButton();
+        return button2;
+    }
+
+    public final JButton prepareButton3() {
+        button3 = new JButton();
+        return button3;
+    }
+
+    public final JButton prepareButton4() {
+        button4 = new JButton();
+        return button4;
     }
 }
