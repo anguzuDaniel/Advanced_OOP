@@ -27,12 +27,24 @@ public class Border_layout {
        home.add(button3, BorderLayout.NORTH);
        home.add(button2, BorderLayout.EAST);
        home.add(button1, BorderLayout.WEST);
+
+       this.prepareLayout();
     }
 
     public final void prepareLayout() {
         home = new JFrame();
+
+        // adding methods that return buttons
+        // this is for more organized work.
+        home.add(this.prepareButton1());
+        home.add(this.prepareButton2());
+        home.add(this.prepareButton3());
+        home.add(this.prepareButton4());
+
         home.setSize(500, 500);
         home.setVisible(true);
+
+        this.prepareLayout();
     }
 
     public final JButton prepareButton1() {
