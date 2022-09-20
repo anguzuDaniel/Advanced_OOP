@@ -8,6 +8,7 @@ public class Main {
 
     }
 
+    // this was merged from the new branch
     public static void sayHello(String name) {
         System.out.println("Hello " + name);
     }
