@@ -6,10 +6,10 @@ import java.awt.*;
 public class Border_layout {
 
     JFrame home;
-    JButton button1;
-    JButton button2;
-    JButton button3;
-    JButton button4;
+    JButton buttonOne;
+    JButton buttonTwo;
+    JButton buttonThree;
+    JButton buttonFour;
 
     public Border_layout() {
        home = new JFrame("Using a border layout.");
@@ -35,22 +35,22 @@ public class Border_layout {
     }
 
     public final JButton prepareButtonOne() {
-        button1 = new JButton("Button 1");
-        return button1;
+        buttonOne = new JButton("Button 1");
+        return buttonOne;
     }
 
     public final JButton prepareButtonTwo() {
-        button2 = new JButton("Button 2");
-        return button2;
+        buttonTwo = new JButton("Button 2");
+        return buttonTwo;
     }
 
     public final JButton prepareButtonThree() {
-        button3 = new JButton("Button 2");
-        return button3;
+        buttonThree = new JButton("Button 2");
+        return buttonThree;
     }
 
     public final JButton prepareButtonFour() {
-        button4 = new JButton("Button 4");
-        return button4;
+        buttonFour = new JButton("Button 4");
+        return buttonFour;
     }
 }
