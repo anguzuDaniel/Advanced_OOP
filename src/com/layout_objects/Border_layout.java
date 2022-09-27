@@ -25,31 +25,31 @@ public class Border_layout {
 
         // adding methods that return buttons
         // this is for more organized work.
-        home.add(this.prepareButton1());
-        home.add(this.prepareButton2());
-        home.add(this.prepareButton3());
-        home.add(this.prepareButton4());
+        home.add(this.prepareButtonOne());
+        home.add(this.prepareButtonTwo());
+        home.add(this.prepareButtonThree());
+        home.add(this.prepareButtonFour());
 
         home.setSize(500, 500);
         home.setVisible(true);
     }
 
-    public final JButton prepareButton1() {
+    public final JButton prepareButtonOne() {
         button1 = new JButton("Button 1");
         return button1;
     }
 
-    public final JButton prepareButton2() {
+    public final JButton prepareButtonTwo() {
         button2 = new JButton("Button 2");
         return button2;
     }
 
-    public final JButton prepareButton3() {
+    public final JButton prepareButtonThree() {
         button3 = new JButton("Button 2");
         return button3;
     }
 
-    public final JButton prepareButton4() {
+    public final JButton prepareButtonFour() {
         button4 = new JButton("Button 4");
         return button4;
     }
