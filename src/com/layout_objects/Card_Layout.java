@@ -9,6 +9,8 @@ public class Card_Layout {
 
     JPanel JPanelOne;
     JPanel JPanelTwo;
+    JPanel JPanelThree;
+    JPanel JPanelFour;
 
     public Card_Layout() {
         this.prepare_layout();
@@ -24,6 +26,11 @@ public class Card_Layout {
 
         cardLayout = new CardLayout();
 
+        home.add(this.prepare_JPanelOne());
+        home.add(this.prepare_JPanelTwo());
+        home.add(this.prepare_JPanelThree());
+        home.add(this.prepare_JPanelFour());
+
         home.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         home.setLayout(cardLayout);
         home.setVisible(true);
@@ -31,11 +38,25 @@ public class Card_Layout {
 
     public final JPanel prepare_JPanelOne() {
         JPanelOne = new JPanel();
+        JPanelOne.setBorder(BorderFactory.createTitledBorder("Panel One"));
         return JPanelOne;
     }
 
     public final JPanel prepare_JPanelTwo() {
         JPanelTwo = new JPanel();
+        JPanelTwo.setBorder(BorderFactory.createTitledBorder("Panel Two"));
         return JPanelTwo;
+    }
+
+    public final JPanel prepare_JPanelThree() {
+        JPanelThree = new JPanel();
+        JPanelThree.setBorder(BorderFactory.createTitledBorder("Panel Three"));
+        return JPanelThree;
+    }
+
+    public final JPanel prepare_JPanelFour() {
+        JPanelFour = new JPanel();
+        JPanelFour.setBorder(BorderFactory.createTitledBorder("Panel Four"));
+        return JPanelFour;
     }
 }
