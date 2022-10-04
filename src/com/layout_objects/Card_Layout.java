@@ -11,30 +11,32 @@ public class Card_Layout {
     JPanel JPanelOne, JPanelTwo, JPanelThree, JPanelFour;
     JButton buttonOne, buttonTwo;
 
-    public Card_Layout() {this.prepare_layout();}
+    public Card_Layout() { this.prepare_layout(); }
 
     public final void prepare_layout() {
 
         // sets the frames look and feel
         JFrame.setDefaultLookAndFeelDecorated(true);
+        home = new JFrame("Using Card Layout");
 
         cardLayout = new CardLayout();
 
-        home = new JFrame("Using Card Layout");
         home.setExtendedState(JFrame.MAXIMIZED_BOTH); // maximizes the frame
         home.add(this.prepare_JPanelOne(), BorderLayout.NORTH);
         home.add(this.prepare_JPanelFour(), BorderLayout.SOUTH);
 
         home.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        home.setLayout(cardLayout);
+
         home.setVisible(true);
     }
 
     public final JPanel prepare_JPanelOne() {
         JPanelOne = new JPanel();
 
-        JPanelOne.setLayout(cardLayout);
+        buttonTwo = new JButton("Display panel Two");
 
+        JPanelOne.setLayout(cardLayout);
+        
         // add panel two and three to panel one
         JPanelOne.add(this.prepare_JPanelTwo(), "Panel Two");
         JPanelOne.add(this.prepare_JPanelThree(), "Panel Three");
@@ -43,6 +45,7 @@ public class Card_Layout {
 
         return JPanelOne;
     }
+
 
     public final JPanel prepare_JPanelTwo() {
         JPanelTwo = new JPanel();
@@ -71,10 +74,10 @@ public class Card_Layout {
         buttonOne = new JButton("Display panel One");
 
         // listens for action ton the button
-        buttonOne.addActionListener(new ActionListener() {
+        this.buttonOne.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                cardLayout.show(JPanelTwo, "Panel Two");
+                cardLayout.show(JPanelOne, "Panel Two");
             }
         });
 
@@ -85,12 +88,13 @@ public class Card_Layout {
         buttonTwo = new JButton("Display panel Two");
 
         // listens for action ton the button
-        buttonTwo.addActionListener(new ActionListener() {
+        this.buttonTwo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                cardLayout.show(JPanelThree, "Panel Three");
+                cardLayout.show(JPanelOne, "Panel Three");
             }
         });
+
         return buttonTwo;
     }
 }
