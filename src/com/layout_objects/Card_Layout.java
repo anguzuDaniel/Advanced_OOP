@@ -6,11 +6,8 @@ import java.awt.*;
 public class Card_Layout {
     JFrame home;
     CardLayout cardLayout;
-
-    JPanel JPanelOne;
-    JPanel JPanelTwo;
-    JPanel JPanelThree;
-    JPanel JPanelFour;
+    JPanel JPanelOne, JPanelTwo, JPanelThree, JPanelFour;
+    JButton buttonOne, buttonTwo;
 
     public Card_Layout() {
         this.prepare_layout();
@@ -24,13 +21,6 @@ public class Card_Layout {
         home = new JFrame("Using Card Layout");
         home.setExtendedState(JFrame.MAXIMIZED_BOTH); // maximizes the frame
 
-        cardLayout = new CardLayout();
-
-        home.add(this.prepare_JPanelOne());
-        home.add(this.prepare_JPanelTwo());
-        home.add(this.prepare_JPanelThree());
-        home.add(this.prepare_JPanelFour());
-
         home.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         home.setLayout(cardLayout);
         home.setVisible(true);
@@ -38,7 +28,15 @@ public class Card_Layout {
 
     public final JPanel prepare_JPanelOne() {
         JPanelOne = new JPanel();
+        cardLayout = new CardLayout();
+        JPanelOne.setLayout(cardLayout);
+
+        // add panel two and three to panel one
+        JPanelOne.add(this.prepare_JPanelTwo(), "Panel Two");
+        JPanelOne.add(this.prepare_JPanelThree(), "Panel Three");
+
         JPanelOne.setBorder(BorderFactory.createTitledBorder("Panel One"));
+
         return JPanelOne;
     }
 
@@ -56,7 +54,22 @@ public class Card_Layout {
 
     public final JPanel prepare_JPanelFour() {
         JPanelFour = new JPanel();
+
+        // adds button's one and two to panel four
+        JPanelFour.add(this.prepareButtonOne());
+        JPanelFour.add(this.prepareButtonTwo());
+
         JPanelFour.setBorder(BorderFactory.createTitledBorder("Panel Four"));
         return JPanelFour;
+    }
+
+    public final JButton prepareButtonOne() {
+        buttonOne = new JButton("Display panel One");
+        return buttonOne;
+    }
+
+    public final JButton prepareButtonTwo() {
+        buttonTwo = new JButton("Display panel Two");
+        return buttonTwo;
     }
 }
