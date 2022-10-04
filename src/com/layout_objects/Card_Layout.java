@@ -36,7 +36,7 @@ public class Card_Layout {
         buttonTwo = new JButton("Display panel Two");
 
         JPanelOne.setLayout(cardLayout);
-        
+
         // add panel two and three to panel one
         JPanelOne.add(this.prepare_JPanelTwo(), "Panel Two");
         JPanelOne.add(this.prepare_JPanelThree(), "Panel Three");
@@ -74,12 +74,7 @@ public class Card_Layout {
         buttonOne = new JButton("Display panel One");
 
         // listens for action ton the button
-        this.buttonOne.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                cardLayout.show(JPanelOne, "Panel Two");
-            }
-        });
+        this.buttonOne.addActionListener(e -> cardLayout.show(JPanelOne, "Panel Two"));
 
         return buttonOne;
     }
@@ -88,12 +83,7 @@ public class Card_Layout {
         buttonTwo = new JButton("Display panel Two");
 
         // listens for action ton the button
-        this.buttonTwo.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                cardLayout.show(JPanelOne, "Panel Three");
-            }
-        });
+        this.buttonTwo.addActionListener(e -> cardLayout.show(JPanelOne, "Panel Three"));
 
         return buttonTwo;
     }
