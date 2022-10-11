@@ -5,10 +5,10 @@ import java.awt.*;
 
 public class Gb_Layout {
     JFrame home;
-
     JButton buttonOne;
     JButton buttonTwo;
     JButton buttonThree;
+    JButton buttonFour;
     GridBagConstraints GBC;
 
     public Gb_Layout() {
@@ -28,6 +28,7 @@ public class Gb_Layout {
         gb_Layout_Frame.add(this.prepare_JButtonOne());
         gb_Layout_Frame.add(this.prepare_JButtonTwo());
         gb_Layout_Frame.add(this.prepare_JButtonTwo());
+        gb_Layout_Frame.add(this.prepare_JButtonFour());
 
         gb_Layout_Frame.setSize(500, 500);
         gb_Layout_Frame.setVisible(true);
@@ -44,7 +45,7 @@ public class Gb_Layout {
     }
 
     public final JButton prepare_JButtonTwo() {
-        buttonTwo = new JButton("Button One");
+        buttonTwo = new JButton("Button Two");
 
         GBC.fill = GridBagConstraints.HORIZONTAL;
         GBC.gridx = 1;
@@ -54,7 +55,7 @@ public class Gb_Layout {
     }
 
     public final JButton prepare_JButtonThree() {
-        buttonThree = new JButton("Button One");
+        buttonThree = new JButton("Button Three");
 
         GBC.fill = GridBagConstraints.HORIZONTAL;
         GBC.gridx = 0;
@@ -62,5 +63,16 @@ public class Gb_Layout {
         GBC.gridwidth = 3;
 
         return buttonThree;
+    }
+
+    public final JButton prepare_JButtonFour() {
+        buttonFour = new JButton("Button Four");
+
+        GBC.fill = GridBagConstraints.HORIZONTAL;
+        GBC.gridx = 1;
+        GBC.gridy = 1;
+        GBC.gridwidth = 2;
+
+        return buttonFour;
     }
 }
