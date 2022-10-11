@@ -2,8 +2,6 @@ package com.layout_objects;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Card_Layout {
     JFrame home;
@@ -22,7 +20,7 @@ public class Card_Layout {
         cardLayout = new CardLayout();
 
         home.setExtendedState(JFrame.MAXIMIZED_BOTH); // maximizes the frame
-        home.add(this.prepare_JPanelOne(), BorderLayout.NORTH);
+        home.add(this.prepare_JPanelOne());
         home.add(this.prepare_JPanelFour(), BorderLayout.SOUTH);
 
         home.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -50,12 +48,14 @@ public class Card_Layout {
     public final JPanel prepare_JPanelTwo() {
         JPanelTwo = new JPanel();
         JPanelTwo.setBorder(BorderFactory.createTitledBorder("Panel Two"));
+        JPanelTwo.setBackground(Color.cyan);
         return JPanelTwo;
     }
 
     public final JPanel prepare_JPanelThree() {
         JPanelThree = new JPanel();
         JPanelThree.setBorder(BorderFactory.createTitledBorder("Panel Three"));
+        JPanelThree.setBackground(Color.GREEN);
         return JPanelThree;
     }
 
