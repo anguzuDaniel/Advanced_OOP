@@ -6,6 +6,8 @@ public class Main {
 //        Border_layout border_layout = new Border_layout();
 //        Card_Layout card_layout = new Card_Layout();
 //        Card_layout2 card_layout2 = new Card_layout2();
-        Gb_Layout gb_layout = new Gb_Layout();
+//        Gb_Layout gb_layout = new Gb_Layout();
+        Menus menus = new Menus();
     }
+
 }
