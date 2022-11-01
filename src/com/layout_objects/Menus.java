@@ -6,9 +6,7 @@ public class Menus extends JFrame {
 
     JMenuBar menuBar;
     JMenu menu, subMenu;
-
     JPanel mainPanel;
-
     JMenuItem itemOne;
     JMenuItem itemTwo;
     JMenuItem itemThree;
