@@ -8,7 +8,8 @@ public class Main {
 //        Card_layout2 card_layout2 = new Card_layout2();
 //        Gb_Layout gb_layout = new Gb_Layout();
 //        Menus menus = new Menus();
-        Tab tab = new Tab();
+//        Tab tab = new Tab();
+        App app = new App();
     }
 
 }

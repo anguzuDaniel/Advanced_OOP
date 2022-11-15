@@ -11,7 +11,7 @@ public class Tab {
 
     public final void prepareLayout() {
         JFrame.setDefaultLookAndFeelDecorated(true);
-        JFrame tabFrame = new JFrame("Grid Bag Layout Frame");
+        JFrame tabFrame = new JFrame("Tabbed layouts");
         tabFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         tabFrame.add(this.prepareTab());
         tabFrame.setVisible(true);
