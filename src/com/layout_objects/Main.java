@@ -1,5 +1,7 @@
 package com.layout_objects;
 
+import javax.swing.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -9,9 +11,13 @@ public class Main {
 //        Gb_Layout gb_layout = new Gb_Layout();
 //        Menus menus = new Menus();
 //        Tab tab = new Tab();
-        App app = new App();
 //        NestedMenu nestedMenu = new NestedMenu();
 //        TestWork testWork = new TestWork();
+//        Test3 test3 = new Test3();
+        try {
+            UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
+            App app = new App();
+        } catch (Exception e) {
+        }
     }
-
 }

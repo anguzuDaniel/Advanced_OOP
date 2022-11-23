@@ -16,5 +16,11 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="pgslookandfeel-1.1.2" level="project" />
+    <orderEntry type="library" name="mysql-connector-j-8.0.31" level="project" />
+    <orderEntry type="library" name="jcalendar-1.1.4" level="project" />
+    <orderEntry type="library" name="JTattoo-1.6.13" level="project" />
+    <orderEntry type="library" name="sqljdbc4-2.0" level="project" />
+    <orderEntry type="library" name="jcalendar-1.1.41" level="project" />
   </component>
 </module>
